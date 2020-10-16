@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/kollamaten/static/css/main.4555aced.chunk.css",
-    "main.js": "/kollamaten/static/js/main.21e5bd0d.chunk.js",
-    "main.js.map": "/kollamaten/static/js/main.21e5bd0d.chunk.js.map",
-    "runtime-main.js": "/kollamaten/static/js/runtime-main.7c181f8f.js",
-    "runtime-main.js.map": "/kollamaten/static/js/runtime-main.7c181f8f.js.map",
-    "static/js/2.15d823c0.chunk.js": "/kollamaten/static/js/2.15d823c0.chunk.js",
-    "static/js/2.15d823c0.chunk.js.map": "/kollamaten/static/js/2.15d823c0.chunk.js.map",
-    "index.html": "/kollamaten/index.html",
-    "precache-manifest.4d0b3cf97172e8ee19094abaa7984a26.js": "/kollamaten/precache-manifest.4d0b3cf97172e8ee19094abaa7984a26.js",
-    "service-worker.js": "/kollamaten/service-worker.js",
-    "static/css/main.4555aced.chunk.css.map": "/kollamaten/static/css/main.4555aced.chunk.css.map",
-    "static/js/2.15d823c0.chunk.js.LICENSE.txt": "/kollamaten/static/js/2.15d823c0.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/kollamaten/static/media/OpenSans-Regular.d7d5d458.ttf",
-    "static/media/arrow-left.2263bc7f.svg": "/kollamaten/static/media/arrow-left.2263bc7f.svg",
-    "static/media/close.a9624144.svg": "/kollamaten/static/media/close.a9624144.svg",
-    "static/media/list.txt": "/kollamaten/static/media/list.5d7cbae9.txt",
-    "static/media/logo.7b6c5455.svg": "/kollamaten/static/media/logo.7b6c5455.svg",
-    "static/media/search.02866e08.svg": "/kollamaten/static/media/search.02866e08.svg",
-    "static/media/web.config": "/kollamaten/static/media/web.9c52a97a.config"
+    "main.css": "/static/css/main.fb0d68c6.chunk.css",
+    "main.js": "/static/js/main.318c913c.chunk.js",
+    "main.js.map": "/static/js/main.318c913c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a3ae0d6c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a3ae0d6c.js.map",
+    "static/js/2.15d823c0.chunk.js": "/static/js/2.15d823c0.chunk.js",
+    "static/js/2.15d823c0.chunk.js.map": "/static/js/2.15d823c0.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d8c65205236aa5ae0ba17966414e36e1.js": "/precache-manifest.d8c65205236aa5ae0ba17966414e36e1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.fb0d68c6.chunk.css.map": "/static/css/main.fb0d68c6.chunk.css.map",
+    "static/js/2.15d823c0.chunk.js.LICENSE.txt": "/static/js/2.15d823c0.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/OpenSans-Regular.d7d5d458.ttf",
+    "static/media/arrow-left.2263bc7f.svg": "/static/media/arrow-left.2263bc7f.svg",
+    "static/media/close.a9624144.svg": "/static/media/close.a9624144.svg",
+    "static/media/list.txt": "/static/media/list.5d7cbae9.txt",
+    "static/media/logo.7b6c5455.svg": "/static/media/logo.7b6c5455.svg",
+    "static/media/search.02866e08.svg": "/static/media/search.02866e08.svg",
+    "static/media/web.config": "/static/media/web.9c52a97a.config"
   },
   "entrypoints": [
-    "static/js/runtime-main.7c181f8f.js",
+    "static/js/runtime-main.a3ae0d6c.js",
     "static/js/2.15d823c0.chunk.js",
-    "static/css/main.4555aced.chunk.css",
-    "static/js/main.21e5bd0d.chunk.js"
+    "static/css/main.fb0d68c6.chunk.css",
+    "static/js/main.318c913c.chunk.js"
   ]
 }
