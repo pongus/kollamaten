@@ -1,59 +1,59 @@
-import React, { useState } from "react";
-import { arrayOf, shape, string } from "prop-types";
-import withStyles from "react-jss";
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import Header from "../Header";
-import Content from "../Content";
-import BackButton from "../BackButton";
-import Input from "../Input";
-import Title from "../Title";
+import React, { useState } from 'react';
+import { arrayOf, shape, string } from 'prop-types';
+import withStyles from 'react-jss';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import Header from '../Header';
+import Content from '../Content';
+import BackButton from '../BackButton';
+import Input from '../Input';
+import Title from '../Title';
 
-const styles = theme => ({
+const styles = (theme) => ({
   item: {
-    borderBottom: [1, "solid", theme.color.gray],
-    "& p": {
+    borderBottom: [1, 'solid', theme.color.gray],
+    '& p': {
       marginTop: 0,
       marginBottom: 0,
-      textDecoration: "none",
-      textOverflow: "ellipsis",
-      whiteSpace: "nowrap",
-      overflow: "hidden"
-    }
+      textDecoration: 'none',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+    },
   },
   empty: {
     maxWidth: 225,
-    margin: [0, "auto"],
-    textAlign: "center",
-    "& h1": {
-      marginTop: theme.space.large
-    }
+    margin: [0, 'auto'],
+    textAlign: 'center',
+    '& h1': {
+      marginTop: theme.space.large,
+    },
   },
   link: {
-    display: "block",
+    display: 'block',
     padding: [15, 20],
     backgroundColor: theme.color.light,
     color: theme.color.dark,
-    textDecoration: "none",
-    "&:active": {
-      backgroundColor: theme.color.gray
-    }
+    textDecoration: 'none',
+    '&:active': {
+      backgroundColor: theme.color.gray,
+    },
   },
   highlight: {
     backgroundColor: theme.color.blueLight,
-    fontWeight: "bold"
-  }
+    fontWeight: 'bold',
+  },
 });
 
 const ListRoute = ({ classes, establishments }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   const [filteredItems, setFilteredItems] = useState(establishments);
 
   const isMatch = (needle, haystack) =>
     haystack.toUpperCase().includes(needle.toUpperCase().trim());
 
-  const highlightMatch = listItem => {
+  const highlightMatch = (listItem) => {
     const item = listItem.trim();
     const term = searchTerm.trim();
 
@@ -69,12 +69,15 @@ const ListRoute = ({ classes, establishments }) => {
       fragments.push(item.slice(endIndex));
 
       return fragments
-        .filter(fragment => fragment !== "")
-        .map(fragment => {
+        .filter((fragment) => fragment !== '')
+        .map((fragment, index) => {
           const isHighlight = term.toUpperCase() === fragment.toUpperCase();
 
           return (
-            <span className={isHighlight ? classes.highlight : null}>
+            <span
+              key={item + index}
+              className={isHighlight ? classes.highlight : null}
+            >
               {fragment}
             </span>
           );
@@ -84,14 +87,14 @@ const ListRoute = ({ classes, establishments }) => {
     return item;
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const searchTerm = event.target.value;
 
     setSearchTerm(searchTerm);
 
     setFilteredItems(
       establishments.filter(
-        item =>
+        (item) =>
           isMatch(searchTerm, item.id) ||
           isMatch(searchTerm, item.name) ||
           isMatch(searchTerm, item.city)
@@ -99,7 +102,7 @@ const ListRoute = ({ classes, establishments }) => {
     );
   };
 
-  const handleReset = () => setSearchTerm("");
+  const handleReset = () => setSearchTerm('');
 
   const renderList = () => {
     const items = searchTerm.length ? filteredItems : establishments;
@@ -108,12 +111,12 @@ const ListRoute = ({ classes, establishments }) => {
       <ul>
         {searchTerm.length && !items.length
           ? renderEmpty()
-          : items.map(item => renderItem(item))}
+          : items.map((item) => renderItem(item))}
       </ul>
     );
   };
 
-  const renderItem = item => (
+  const renderItem = (item) => (
     <li key={item.id} className={classes.item}>
       <Link to={`/SE/${item.id}`} className={classes.link}>
         {renderText(item)}
@@ -129,7 +132,7 @@ const ListRoute = ({ classes, establishments }) => {
     </li>
   );
 
-  const renderText = item => {
+  const renderText = (item) => {
     if (isMatch(searchTerm, item.id)) {
       return (
         <>
@@ -193,13 +196,13 @@ ListRoute.propTypes = {
       id: string,
       name: string,
       species: string,
-      state: string
+      state: string,
     })
-  )
+  ),
 };
 
 ListRoute.defaultProps = {
-  establishments: []
+  establishments: [],
 };
 
 export default withStyles(styles)(ListRoute);
