@@ -1,8 +1,8 @@
 {
+  "homepage": "https://pongus.github.io/kollamaten",
   "name": "kollamaten",
   "version": "1.1.0",
   "private": true,
-  "homepage": "http://kollamaten.se",
   "dependencies": {
     "axios": "^0.20.0",
     "react": "^16.14.0",
@@ -14,11 +14,12 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postbuild": "react-snap"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
