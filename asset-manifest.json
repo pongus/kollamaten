@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/kollamaten/static/css/main.5d45f7ec.chunk.css",
+    "main.js": "/kollamaten/static/js/main.ed4058ac.chunk.js",
+    "main.js.map": "/kollamaten/static/js/main.ed4058ac.chunk.js.map",
+    "runtime-main.js": "/kollamaten/static/js/runtime-main.7c181f8f.js",
+    "runtime-main.js.map": "/kollamaten/static/js/runtime-main.7c181f8f.js.map",
+    "static/js/2.15d823c0.chunk.js": "/kollamaten/static/js/2.15d823c0.chunk.js",
+    "static/js/2.15d823c0.chunk.js.map": "/kollamaten/static/js/2.15d823c0.chunk.js.map",
+    "index.html": "/kollamaten/index.html",
+    "precache-manifest.b3e94f5393ff6c433d3039c6f553dfac.js": "/kollamaten/precache-manifest.b3e94f5393ff6c433d3039c6f553dfac.js",
+    "service-worker.js": "/kollamaten/service-worker.js",
+    "static/css/main.5d45f7ec.chunk.css.map": "/kollamaten/static/css/main.5d45f7ec.chunk.css.map",
+    "static/js/2.15d823c0.chunk.js.LICENSE.txt": "/kollamaten/static/js/2.15d823c0.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/kollamaten/static/media/OpenSans-Regular.d7d5d458.ttf",
+    "static/media/arrow-left.4d580948.svg": "/kollamaten/static/media/arrow-left.4d580948.svg",
+    "static/media/close.b04d9525.svg": "/kollamaten/static/media/close.b04d9525.svg",
+    "static/media/list.txt": "/kollamaten/static/media/list.befc6479.txt",
+    "static/media/logo.46234caa.svg": "/kollamaten/static/media/logo.46234caa.svg",
+    "static/media/search.af1db1d5.svg": "/kollamaten/static/media/search.af1db1d5.svg",
+    "static/media/web.config": "/kollamaten/static/media/web.f37de2cc.config"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c181f8f.js",
+    "static/js/2.15d823c0.chunk.js",
+    "static/css/main.5d45f7ec.chunk.css",
+    "static/js/main.ed4058ac.chunk.js"
+  ]
+}
