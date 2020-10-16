@@ -1,26 +1,26 @@
-import React, { PureComponent } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ThemeProvider } from "react-jss";
-import Analytics from "react-router-ga";
-import axios from "axios";
-import file from "./list.txt";
-import HomeRoute from "./components/HomeRoute";
-import AboutRoute from "./components/AboutRoute";
-import ListRoute from "./components/ListRoute";
-import DetailsRoute from "./components/DetailsRoute";
-import NotFoundRoute from "./components/NotFoundRoute";
+import React, { PureComponent } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ThemeProvider } from 'react-jss';
+import Analytics from 'react-router-ga';
+import axios from 'axios';
+import file from './list.txt';
+import HomeRoute from './components/HomeRoute';
+import AboutRoute from './components/AboutRoute';
+import ListRoute from './components/ListRoute';
+import DetailsRoute from './components/DetailsRoute';
+import NotFoundRoute from './components/NotFoundRoute';
 
 const theme = {
   font: {
-    regular: "OpenSans-Regular"
+    regular: 'OpenSans-Regular',
   },
   color: {
-    dark: "#4A4A4A",
-    gray: "#C8C8C8",
-    light: "#FFFFFF",
-    blueDark: "#001E31",
-    blue: "#004573",
-    blueLight: "#CDE8F8"
+    dark: '#4A4A4A',
+    gray: '#C8C8C8',
+    light: '#FFFFFF',
+    blueDark: '#001E31',
+    blue: '#004573',
+    blueLight: '#CDE8F8',
   },
   space: {
     minor: 5,
@@ -31,8 +31,8 @@ const theme = {
     header: 70,
     maxWidth: 850,
     backButton: 75,
-    logo: 200
-  }
+    logo: 200,
+  },
 };
 
 class App extends PureComponent {
@@ -42,7 +42,7 @@ class App extends PureComponent {
     this.state = {
       isLoaded: false,
       establishments: [],
-      height: null
+      height: null,
     };
   }
 
@@ -51,22 +51,22 @@ class App extends PureComponent {
 
     axios
       .get(file)
-      .then(result => {
+      .then((result) => {
         this.setState({
-          establishments: result.data
+          establishments: result.data,
         });
       })
       .then(() => {
         this.setState({
-          isLoaded: true
+          isLoaded: true,
         });
       });
 
-    window.addEventListener("resize", this.setHeight);
+    window.addEventListener('resize', this.setHeight);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.setHeight);
+    window.removeEventListener('resize', this.setHeight);
   }
 
   setHeight = () => {
@@ -75,7 +75,7 @@ class App extends PureComponent {
 
     if (height !== innerHeight) {
       this.setState({
-        height: innerHeight
+        height: innerHeight,
       });
     }
   };
@@ -97,7 +97,7 @@ class App extends PureComponent {
   detailsRoute = ({ match }) => {
     const { isLoaded, establishments } = this.state;
     const details = establishments.find(
-      establishment => establishment.id === match.params.id
+      (establishment) => establishment.id === match.params.id
     );
 
     return isLoaded ? <DetailsRoute details={details} /> : null;
@@ -115,6 +115,7 @@ class App extends PureComponent {
             <Analytics id="UA-135010099-1">
               <Switch>
                 <Route exact path="/" component={this.homeRoute} />
+                <Route exact path="/kollamaten" component={this.homeRoute} />
                 <Route exact path="/om" component={this.aboutRoute} />
                 <Route exact path="/lista" component={this.listRoute} />
                 <Route exact path="/SE/:id" component={this.detailsRoute} />
