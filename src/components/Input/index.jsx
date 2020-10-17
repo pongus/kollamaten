@@ -22,14 +22,13 @@ const styles = theme => ({
     "-webkit-appearance": "none",
     outline: "none",
     color: theme.color.dark,
-    fontSize: "1.2em",
+    fontSize: 18, // Note: Using 1.2em will automatically zoom in on phones
     "&::placeholder": {
       color: theme.color.gray,
       fill: theme.color.gray
     },
     "@media (max-width: 320px)": {
-      padding: theme.space.small,
-      fontSize: "1.1em"
+      padding: theme.space.small
     }
   },
   reset: {
@@ -67,9 +66,8 @@ const Input = ({ classes, value, onChange, onReset }) => {
         onChange={onChange}
         placeholder="Ange t.ex. 1024"
       />
-      {value.length ? (
-        <Icon className={classes.reset} onClick={onReset} />
-      ) : null}
+
+      {value.length > 0 && <Icon className={classes.reset} onClick={onReset} />}
     </div>
   );
 };
