@@ -22,7 +22,10 @@ const styles = theme => ({
     "-webkit-appearance": "none",
     outline: "none",
     color: theme.color.dark,
-    fontSize: 18, // Note: Using 1.2em will automatically zoom in on phones
+    fontSize: 16, // Note: Using 1.2em will automatically zoom in on phones
+    "&:focus": {
+      fontSize: '16px !important'
+    },
     "&::placeholder": {
       color: theme.color.gray,
       fill: theme.color.gray
